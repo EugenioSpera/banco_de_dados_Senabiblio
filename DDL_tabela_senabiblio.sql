@@ -133,4 +133,24 @@ CONSTRAINT fk_LivroAutor_Autor FOREIGN KEY (idAutor) REFERENCES Autor (idAutor)
 
 
 
-SELECT * FROM LivroAutor 
+SELECT * FROM livroautor 
+
+ALTER TABLE usuario
+DROP COLUMN celular
+
+USE starterdb22
+
+SELECT * FROM clientes
+ORDER BY nome asc
+
+SELECT * FROM clientes
+ORDER BY nome DESC
+
+SELECT nome, cpf, cidade FROM clientes
+WHERE cidade='Santos'
+ORDER BY nome DESC
+
+ALTER TABLE Recepcionista
+MODIFY COLUMN ctps CHAR(11);
+
+SELECT * from Recepcionista
