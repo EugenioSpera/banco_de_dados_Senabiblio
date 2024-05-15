@@ -48,7 +48,10 @@ CONSTRAINT fk_ContatoTelefonico_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuar
 
 );
 
-SELECT * FROM ContatoTelefonico
+SELECT * FROM contatotelefonico
+
+ALTER TABLE ContatoTelefonico
+DROP COLUMN idContatoTelefonico
 
 CREATE TABLE Professor (
 atuacao varchar(10) NOT NULL,
@@ -153,4 +156,21 @@ ORDER BY nome DESC
 ALTER TABLE Recepcionista
 MODIFY COLUMN ctps CHAR(11);
 
-SELECT * from Recepcionista
+SELECT * from recepcionista
+
+ALTER TABLE Recepcionista
+DROP COLUMN idRecepcionista
+
+ALTER TABLE recepcionista 
+ADD idRecepcionista INT NOT NULL
+
+ALTER TABLE recepcionista 
+ADD CONSTRAINT PRIMARY KEY(idRecepcionista);
+
+SELECT * FROM usuario
+
+SELECT * FROM recepcionista 
+
+SELECT * FROM emprestimo
+
+
